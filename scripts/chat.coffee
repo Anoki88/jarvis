@@ -48,11 +48,12 @@ jtalk = (arr, msg, robot) ->
 # creates a new mitsuku for every new user
 mtalk = (txt, msg, robot) ->
 	user = msg.message.user.name
-	if not army[user]?
-		army[user] = mitsukuMaker()
+	channel = msg.message.channel.name
+	if not army[channel]?
+		army[channel] = mitsukuMaker()
 	else
 		''
-	mitsuku = army[user]
+	mitsuku = army[channel]
 	mitsuku.send(txt).then (reply) ->
 		msg.send reply.replace(/\s+\.$/, '.').replace(/mitsuku/i, robot.name)
 
