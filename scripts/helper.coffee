@@ -106,7 +106,8 @@ typedCmd =
       /time( at)? ([\w\-]+)/i
       /((?:(?!is).)*) is (in|at) (.*)/i
       /I\'*\’*m (in|at) (.*)/i
-      /where is ([\w\-]+)/i
+      /I am (in|at) (.*)/i
+      /where is (.+)/i
       /where am I/i
       /weather( at)? ?(.+)?/i
     ],
@@ -128,7 +129,6 @@ typedCmd =
       /I am(?! in| at) (.*)/i
       /I\'*\’*m(?! in| at) (.*)/i
       /My name is(?! in| at) (.*)/i
-      /((?:(?!is)\w)*) is(?! in| at) (.*)/i
       /who is (.*)/i
       /who am I/i
       /clear alias for (.*)/i
